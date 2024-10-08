@@ -124,14 +124,28 @@ footer {
 }
 
 /* Dark Mode */
+/* General Dark Theme Settings */
 .dark-theme {
     background-color: #121212;
     color: #e0e0e0;
 }
 
-.dark-theme .education-item, .dark-theme .experience-item, .dark-theme .project-card {
-    background-color: rgba(255, 255, 255, 0.05);
+/* Professional Skills Section Dark Mode */
+.dark-theme .skill-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
+
+.dark-theme .skill-card img {
+    filter: invert(1); /* Inverts the icons' colors for dark mode */
+}
+
+.dark-theme p {
+    color: #ffffff; /* Ensures text remains white in dark mode */
+}
+
+
+
 /* Professional Skills Section */
 #tech-stack {
     text-align: center;
@@ -156,9 +170,11 @@ footer {
     transition: transform 0.3s ease;
 }
 
+/* Ensuring icons appear clear */
 .skill-card img {
     max-width: 80px;
     margin-bottom: 15px;
+    transition: filter 0.3s ease;
 }
 
 .skill-card p {
