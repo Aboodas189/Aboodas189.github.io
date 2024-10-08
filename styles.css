@@ -21,6 +21,7 @@ a {
 /* Section styles */
 section {
     padding: 50px 20px;
+    margin-bottom: 50px; /* Added margin-bottom to separate sections */
 }
 
 /* Transparent Box for Education and Experience */
@@ -35,6 +36,7 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .education-item h3, .experience-item h3 {
@@ -64,6 +66,17 @@ section {
     text-align: center;
 }
 
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Dark theme styles */
 .dark-theme {
     background-color: #121212;
@@ -73,4 +86,3 @@ section {
 .dark-theme .education-item, .dark-theme .experience-item, .dark-theme .project-card {
     background-color: rgba(255, 255, 255, 0.05);
 }
-
