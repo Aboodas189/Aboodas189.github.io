@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -10,17 +10,22 @@ body {
 header {
     background-color: #007bff;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 header h1 {
+    font-size: 3em;
     margin: 0;
-    font-size: 2.5em;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 nav a {
@@ -36,33 +41,62 @@ nav a:hover {
 
 /* Section Styles */
 section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 900px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
     color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
 }
 
-ul li {
-    padding: 5px 0;
+.skills-grid div {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-a {
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.project-card a {
     color: #007bff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-a:hover {
+.project-card a:hover {
     text-decoration: underline;
 }
 
@@ -72,11 +106,19 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 footer p {
     margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
 }
