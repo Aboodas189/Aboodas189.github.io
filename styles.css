@@ -75,77 +75,6 @@ a {
     background-color: #ff7979;
 }
 
-/* Section Styles */
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* Education and Experience */
-.education-grid, .experience-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.education-item, .experience-item {
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Projects */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
-
-.project-card {
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Dark Mode */
-/* General Dark Theme Settings */
-.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-/* Professional Skills Section Dark Mode */
-.dark-theme .skill-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-.dark-theme .skill-card img {
-    filter: invert(1); /* Inverts the icons' colors for dark mode */
-}
-
-.dark-theme p {
-    color: #ffffff; /* Ensures text remains white in dark mode */
-}
-
-
-
 /* Professional Skills Section */
 #tech-stack {
     text-align: center;
@@ -170,11 +99,9 @@ footer {
     transition: transform 0.3s ease;
 }
 
-/* Ensuring icons appear clear */
 .skill-card img {
     max-width: 80px;
     margin-bottom: 15px;
-    transition: filter 0.3s ease;
 }
 
 .skill-card p {
@@ -186,3 +113,47 @@ footer {
     transform: scale(1.05);
 }
 
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Dark theme */
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme .skill-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .skill-card img {
+    filter: invert(1); /* Inverts the icons' colors for dark mode */
+}
+
+.dark-theme p {
+    color: #ffffff; /* Text in white */
+}
+
+/* Hero section dark mode */
+.dark-theme #hero {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark-theme .hero-links a {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.dark-theme footer {
+    background-color: #333333;
+}
