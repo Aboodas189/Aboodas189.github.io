@@ -159,3 +159,40 @@ footer {
 .dark-theme footer {
     background-color: #333333;
 }
+
+/* Education Section */
+#education {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.education-item {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-item img.edu-logo {
+    max-width: 80px;
+    border-radius: 10px;
+}
+
+.education-item h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.education-item p {
+    margin: 5px 0;
+    text-align: center;
+}
