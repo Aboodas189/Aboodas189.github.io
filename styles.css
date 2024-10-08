@@ -10,6 +10,7 @@ body {
 
 h1, h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 a {
@@ -17,37 +18,12 @@ a {
     text-decoration: none;
 }
 
-/* Hero section */
-#hero {
-    background-color: #007bff;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero-links a {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #007bff;
-    border-radius: 5px;
-}
-
-#theme-toggle {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff5252;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-/* Sections */
+/* Section styles */
 section {
     padding: 50px 20px;
 }
 
+/* Skills Grid */
 .skills-grid, .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -62,18 +38,28 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark mode styles */
+/* Professional Experience */
+.experience-item, .education-item {
+    margin-bottom: 30px;
+}
+
+h3 strong {
+    color: #007bff;
+}
+
+/* Contact */
+#contact a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Dark theme styles */
 .dark-theme {
     background-color: #121212;
     color: #e0e0e0;
-}
-
-.dark-theme #hero {
-    background-color: #1e1e1e;
 }
 
 .dark-theme .project-card {
     background-color: #1e1e1e;
     color: #fff;
 }
-
