@@ -21,60 +21,36 @@ a {
 /* Section styles */
 section {
     padding: 50px 20px;
-    margin-bottom: 50px; /* Added margin-bottom to separate sections */
-}
-
-/* Transparent Box for Education and Experience */
-.education-grid, .experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.education-item, .experience-item {
-    background-color: rgba(0, 0, 0, 0.05); /* Slight transparency */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.education-item h3, .experience-item h3 {
-    color: #007bff;
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
-
-.project-card {
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Skills Grid */
-.skills-grid {
+.skills-grid, .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     text-align: center;
 }
 
-/* Footer */
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
+.project-card {
+    background-color: white;
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Professional Experience */
+.experience-item, .education-item {
+    margin-bottom: 30px;
+}
+
+h3 strong {
+    color: #007bff;
+}
+
+/* Contact */
+#contact a {
+    display: block;
+    margin-bottom: 10px;
 }
 
 /* Dark theme styles */
@@ -83,6 +59,7 @@ footer {
     color: #e0e0e0;
 }
 
-.dark-theme .education-item, .dark-theme .experience-item, .dark-theme .project-card {
-    background-color: rgba(255, 255, 255, 0.05);
+.dark-theme .project-card {
+    background-color: #1e1e1e;
+    color: #fff;
 }
