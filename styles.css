@@ -13,84 +13,37 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-p {
-    text-align: center;
-    margin: 0 auto 20px;
-    max-width: 800px;
-}
-
 a {
     color: #007bff;
     text-decoration: none;
 }
 
-/* Hero Section */
-#hero {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.hero-content h1 {
-    font-size: 3em;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-}
-
-.hero-links {
-    margin-top: 20px;
-}
-
-.hero-links a {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #007bff;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.hero-links a:hover {
-    background-color: #f0f0f0;
-}
-
-#theme-toggle {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff5252;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-/* Section Styles */
+/* Section styles */
 section {
     padding: 50px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+    margin-bottom: 50px; /* Added margin-bottom to separate sections */
 }
 
-/* Education and Experience */
+/* Transparent Box for Education and Experience */
 .education-grid, .experience-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    margin-bottom: 40px;
 }
 
 .education-item, .experience-item {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05); /* Slight transparency */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Projects */
+.education-item h3, .experience-item h3 {
+    color: #007bff;
+}
+
+/* Projects Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -105,6 +58,14 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
 /* Footer */
 footer {
     background-color: #007bff;
@@ -112,11 +73,11 @@ footer {
     text-align: center;
     padding: 20px;
     position: relative;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
 
-/* Dark Mode */
+/* Dark theme styles */
 .dark-theme {
     background-color: #121212;
     color: #e0e0e0;
@@ -125,5 +86,3 @@ footer {
 .dark-theme .education-item, .dark-theme .experience-item, .dark-theme .project-card {
     background-color: rgba(255, 255, 255, 0.05);
 }
-
-
