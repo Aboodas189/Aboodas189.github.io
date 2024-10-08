@@ -102,6 +102,7 @@ a {
 .skill-card img {
     max-width: 80px;
     margin-bottom: 15px;
+    filter: none; /* Ensure icons are not inverted in light mode */
 }
 
 .skill-card p {
@@ -136,7 +137,8 @@ footer {
 }
 
 .dark-theme .skill-card img {
-    filter: invert(1); /* Inverts the icons' colors for dark mode */
+    filter: none; /* Avoid full inversion */
+    opacity: 0.9; /* Slight transparency in dark mode */
 }
 
 .dark-theme p {
