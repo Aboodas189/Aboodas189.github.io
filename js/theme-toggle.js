@@ -21,3 +21,5 @@ themeToggle.addEventListener('click', () => {
         localStorage.setItem('theme', ''); // Remove theme from localStorage
     }
 });
+
+
