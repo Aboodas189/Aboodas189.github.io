@@ -84,7 +84,7 @@ a {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -102,7 +102,6 @@ a {
 .skill-card img {
     max-width: 80px;
     margin-bottom: 15px;
-    filter: none; /* Ensure icons are not inverted in light mode */
 }
 
 .skill-card p {
@@ -132,32 +131,31 @@ footer {
 }
 
 .dark-theme .skill-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 .dark-theme .skill-card img {
-    filter: none; /* Avoid full inversion */
-    opacity: 0.9; /* Slight transparency in dark mode */
+    opacity: 0.9;
 }
 
 .dark-theme p {
-    color: #ffffff; /* Text in white */
+    color: #ffffff;
 }
 
 /* Hero section dark mode */
 .dark-theme #hero {
-    background-color: #333333;
+    background-color: #1e1e1e;
     color: #ffffff;
 }
 
 .dark-theme .hero-links a {
-    background-color: #444444;
+    background-color: #333333;
     color: #ffffff;
 }
 
 .dark-theme footer {
-    background-color: #333333;
+    background-color: #1e1e1e;
 }
 
 /* Education Section */
@@ -189,12 +187,75 @@ footer {
 
 .education-item h3 {
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 .education-item p {
     margin: 5px 0;
-    text-align: center;
+    text-align: left;
 }
 
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+}
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.dark-theme .project-card {
+    background-color: #1e1e1e;
+}
+
+/* Certificates and Soft Skills Sections */
+#certificates, #soft-skills {
+    padding: 50px 20px;
+}
+
+#certificates ul, #soft-skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#certificates li, #soft-skills li {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.dark-theme #certificates li, .dark-theme #soft-skills li {
+    background-color: #333333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-item h3, .education-item p {
+        text-align: center;
+    }
+}
