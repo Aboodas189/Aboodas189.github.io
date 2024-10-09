@@ -1,4 +1,51 @@
-/* Links in hero section */
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin: 0 auto 20px;
+    max-width: 800px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+.hero-links {
+    margin-top: 20px;
+}
+
 .hero-links a {
     margin: 0 10px;
     padding: 10px 20px;
@@ -7,15 +54,12 @@
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero-links a:hover {
     background-color: #f0f0f0;
-    color: #0056b3;
 }
 
-/* Button for theme toggle */
 #theme-toggle {
     margin-top: 20px;
     padding: 10px 20px;
@@ -24,11 +68,96 @@
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: 0.3s;
 }
 
 #theme-toggle:hover {
     background-color: #ff7979;
+}
+
+/* Professional Skills Section */
+#tech-stack {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-card img {
+    max-width: 80px;
+    margin-bottom: 15px;
+    filter: none; /* Ensure icons are not inverted in light mode */
+}
+
+.skill-card p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Dark theme */
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme .skill-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .skill-card img {
+    filter: none; /* Avoid full inversion */
+    opacity: 0.9; /* Slight transparency in dark mode */
+}
+
+.dark-theme p {
+    color: #ffffff; /* Text in white */
+}
+
+/* Hero section dark mode */
+.dark-theme #hero {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark-theme .hero-links a {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.dark-theme footer {
+    background-color: #333333;
 }
 
 /* Education Section */
@@ -39,10 +168,8 @@
 
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
 }
 
 .education-item {
@@ -69,185 +196,3 @@
     margin: 5px 0;
     text-align: center;
 }
-
-/* Projects Section */
-#projects {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-card h3 {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 1em;
-}
-
-.project-card a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project-card a:hover {
-    color: #0056b3;
-}
-
-/* Certificates Section */
-#certificates {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-#certificates ul {
-    list-style: none;
-    padding: 0;
-}
-
-#certificates ul li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-/* Soft Skills Section */
-#soft-skills {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-#soft-skills ul {
-    list-style: none;
-    padding: 0;
-}
-
-#soft-skills ul li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-/* Professional Skills Section */
-#tech-stack {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-.skill-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.skill-card img {
-    max-width: 80px;
-    margin-bottom: 15px;
-}
-
-.skill-card p {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.skill-card:hover {
-    transform: scale(1.05);
-}
-
-/* Contact Section */
-#contact {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-#contact p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Dark theme */
-.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.dark-theme .skill-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-.dark-theme .skill-card img {
-    opacity: 0.9;
-}
-
-.dark-theme p {
-    color: #ffffff;
-}
-
-.dark-theme #hero {
-    background-color: #333333;
-    color: #ffffff;
-}
-
-.dark-theme .hero-links a {
-    background-color: #444444;
-    color: #ffffff;
-}
-
-.dark-theme footer {
-    background-color: #333333;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #hero h1 {
-        font-size: 2.5em;
-    }
-    
-    .hero-content p {
-        font-size: 1.1em;
-    }
-}
-
