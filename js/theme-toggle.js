@@ -22,3 +22,5 @@ themeToggle.addEventListener('click', () => {
     // Save the user's preference in local storage
     localStorage.setItem('theme', theme);
 });
+
+
