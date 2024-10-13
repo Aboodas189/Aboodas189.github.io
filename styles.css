@@ -12,12 +12,14 @@ body {
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #333;
 }
 
 p, ul {
     text-align: center;
     margin: 0 auto 20px;
     max-width: 800px;
+    color: #555;
 }
 
 a {
@@ -116,11 +118,13 @@ a:hover {
 .education-item h3 {
     font-weight: bold;
     text-align: left;
+    color: #333;
 }
 
 .education-item p {
     margin: 5px 0;
     text-align: left;
+    color: #555;
 }
 
 /* Professional Experience Section */
@@ -146,10 +150,12 @@ a:hover {
 .experience-item h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .experience-item p {
     margin: 0;
+    color: #555;
 }
 
 /* Projects Section */
@@ -175,10 +181,12 @@ a:hover {
 .project-card h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .project-card p {
     font-size: 1.1em;
+    color: #555;
 }
 
 .project-card a {
@@ -209,6 +217,7 @@ a:hover {
 #certificates ul li {
     font-size: 1.2em;
     margin-bottom: 10px;
+    color: #333;
 }
 
 /* Soft Skills Section */
@@ -225,6 +234,7 @@ a:hover {
 #soft-skills ul li {
     font-size: 1.2em;
     margin-bottom: 10px;
+    color: #333;
 }
 
 /* Professional Skills Section */
@@ -259,6 +269,7 @@ a:hover {
 .skill-card p {
     font-weight: bold;
     font-size: 1.2em;
+    color: #333;
 }
 
 .skill-card:hover {
@@ -297,18 +308,28 @@ footer {
     color: #e0e0e0;
 }
 
-.dark-theme .skill-card {
-    background-color: rgba(255, 255, 255, 0.1);
+.dark-theme .skill-card, 
+.dark-theme .education-item, 
+.dark-theme .experience-item, 
+.dark-theme .project-card {
+    background-color: #222;
+    color: white;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
-.dark-theme .skill-card img {
-    filter: none;
-    opacity: 0.9;
+.dark-theme .skill-card img,
+.dark-theme .project-card img,
+.dark-theme .education-item img,
+.dark-theme .experience-item img {
+    filter: invert(1); /* To ensure logos are visible */
 }
 
 .dark-theme p, .dark-theme a {
     color: #ffffff;
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3 {
+    color: white;
 }
 
 .dark-theme #hero {
