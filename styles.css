@@ -8,11 +8,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-section {
-    padding: 40px 20px;
-    margin-bottom: 30px;
-}
-
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -107,6 +102,7 @@ a {
 .skill-card img {
     max-width: 80px;
     margin-bottom: 15px;
+    filter: none; /* Ensure icons are not inverted in light mode */
 }
 
 .skill-card p {
@@ -131,12 +127,8 @@ footer {
 
 /* Dark theme */
 .dark-theme {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-}
-
-.dark-theme a {
-    color: #ffcc00;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 .dark-theme .skill-card {
@@ -144,6 +136,16 @@ footer {
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
+.dark-theme .skill-card img {
+    filter: none; /* Avoid full inversion */
+    opacity: 0.9; /* Slight transparency in dark mode */
+}
+
+.dark-theme p {
+    color: #ffffff; /* Text in white */
+}
+
+/* Hero section dark mode */
 .dark-theme #hero {
     background-color: #333333;
     color: #ffffff;
@@ -181,18 +183,16 @@ footer {
 }
 
 .education-item img.edu-logo {
-    max-width: 100px;
-    height: auto;
-    border-radius: 5px;
+    max-width: 80px;
+    border-radius: 10px;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .projects-grid, .education-grid {
-        grid-template-columns: 1fr;
-    }
+.education-item h3 {
+    font-weight: bold;
+    text-align: center;
+}
 
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.education-item p {
+    margin: 5px 0;
+    text-align: center;
 }
