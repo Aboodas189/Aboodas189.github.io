@@ -1,36 +1,45 @@
+/* General body styling for light mode */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333; /* Default text color for light mode */
 }
 
+
+/* Headings */
 h1, h2, h3 {
     margin: 0 0 10px 0;
 }
 
+/* Header stays blue in both light and dark mode */
 header {
-    background-color: #007BFF;
-    color: white;
+    background-color: #007BFF; /* Blue background for header */
+    color: white; /* White text */
     text-align: center;
     padding: 50px 20px;
 }
 
+/* Ensuring hero section text remains white in both modes */
 .hero-content h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: white;
 }
 
 .hero-content p {
     font-size: 1.2em;
+    color: white;
 }
 
+/* For light mode */
 .hero-links a {
     text-decoration: none;
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: white;
-    color: #007BFF;
+    background-color: white; /* White background */
+    color: #007BFF; /* Blue text */
     border-radius: 5px;
 }
 
@@ -45,6 +54,7 @@ header {
     border-radius: 5px;
 }
 
+/* Section Styling */
 section {
     padding: 40px 20px;
     max-width: 1200px;
@@ -54,7 +64,7 @@ section {
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     margin-bottom: 30px;
 }
-
+/* Education, Experience, and Skills Grid */
 .education-grid, .experience-grid, .projects-grid, .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -64,39 +74,88 @@ section {
 
 .education-item, .experience-item, .project-card, .skill-card {
     flex: 1;
-    min-width: 280px;
+    min-width: 250px;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.education-item:hover, .experience-item:hover, .project-card:hover {
-    transform: scale(1.05);
+.education-item:hover, .experience-item:hover, .skill-card:hover {
+    transform: scale(1.05); /* Apply the same hover effect */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
 }
 
-.edu-logo, .skill-card img {
-    max-width: 100%;
+/* Image size adjustments for skill images */
+.skill-card img {
+    max-width: 100px;
+    margin: 0 auto;
+    display: block;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-h2 {
-    font-size: 1.8em;
-    color: #333;
+.skill-card p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
 }
 
-h3 {
-    font-size: 1.3em;
+/* Footer Styling */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
 
-p {
-    color: #666;
-    line-height: 1.6;
+footer p {
+    color: white;
 }
 
+/* Dark theme */
+/* Dark theme styling */
+/* Dark theme styling */
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0; /* Default text color for dark mode */
+}
+
+.dark-theme .skill-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .skill-card img {
+    filter: none;
+    opacity: 0.9;
+}
+
+.dark-theme p {
+    color: #ffffff;
+}
+
+/* Hero section dark mode */
+.dark-theme #hero {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark-theme .hero-links a {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.dark-theme footer {
+    background-color: #333333;
+}
+
+/* Project grid hover effects */
 .projects-grid a {
     display: inline-block;
     padding: 10px 15px;
@@ -104,19 +163,99 @@ p {
     color: white;
     border-radius: 5px;
     text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Adds a hover shadow */
 }
 
 .projects-grid a:hover {
-    background-color: #0056b3;
+    background-color: #ffdd57;
+    color: #333;
+    transform: translateY(-5px) scale(1.1); /* Lifts and enlarges slightly */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Increases shadow */
 }
 
-footer {
-    text-align: center;
+.projects-grid a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projects-grid a:hover::after {
+    opacity: 1;
+}
+
+/* Project card styling */
+.project-card {
     padding: 20px;
-    background-color: #007BFF;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+/* Center the items inside the education section */
+.education-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* space between the two items */
+}
+
+/* Ensure the content inside each education-item is centered */
+.education-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.education-item img {
+    max-width: 150px;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+/* Section styling for dark theme */
+.dark-theme section {
+    background-color: #333333; /* Dark background for sections */
+    color: #ffffff; /* White text inside sections */
+}
+
+/* Ensuring that links in dark mode are visible */
+.dark-theme a {
+    color: #ffdd57; /* Yellow links for dark mode */
+}
+
+.dark-theme .education-item,
+.dark-theme .experience-item,
+.dark-theme .project-card,
+.dark-theme .skill-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Dark mode card background */
+    color: #ffffff; /* Ensure text in cards is white */
+}
+
+/* Footer styling for dark theme */
+/* Footer styling for dark theme */
+.dark-theme footer {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Keeping the header blue in dark mode */
+.dark-theme header {
+    background-color: #007BFF !important; /* Force header to be blue in dark mode */
     color: white;
 }
 
-footer p {
-    margin: 0;
+/* For dark mode */
+.dark-theme .hero-links a {
+    background-color: white; /* White background in dark mode */
+    color: #007BFF; /* Keep text blue */
 }
