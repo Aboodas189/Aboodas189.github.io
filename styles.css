@@ -38,9 +38,17 @@ header {
     text-decoration: none;
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: white; /* White background */
-    color: #007BFF; /* Blue text */
+    background-color: white;
+    color: #007BFF; /* Blue text for links */
     border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow */
+}
+.hero-links a:hover {
+    background-color: #ffdd57; /* Fun yellow background on hover */
+    color: #333; /* Darker text color on hover */
+    transform: translateY(-5px) rotate(-5deg) scale(1.1); /* Slight rotation, lift, and scaling */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
 }
 
 #theme-toggle {
@@ -52,8 +60,15 @@ header {
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+#theme-toggle:hover {
+    background-color: #ffdd57;
+    color: #333;
+    transform: translateY(-5px) rotate(5deg) scale(1.1); /* Slight rotation, lift, and scaling */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+}
 /* Section Styling */
 section {
     padding: 40px 20px;
